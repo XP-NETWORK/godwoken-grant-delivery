@@ -1,0 +1,21 @@
+{
+  "name": "testing-godwoken",
+  "version": "1.0.0",
+  "description": "Testing Godwoken",
+  "main": "index.js",
+  "licenses": ["MIT"],
+  "scripts": {
+    "test": "tsc && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elrondnetwork/erdjs": "^10.2.5",
+    "@taquito/taquito": "^12.1.1",
+    "@temple-wallet/dapp": "^7.0.0",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.8",
+    "xp.network": "^3.0.8"
+  }
+}
