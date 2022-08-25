@@ -254,3 +254,72 @@ Wrapped NFTs: https://bridge-wnftapi.herokuapp.com/w/305095119371647373983483580
 "thumbnailUri": "https://assets.polkamon.com/images/Unimons_T02C03H06B04G00.jpg"
 }
 ```
+
+## `Milestone 3` — Integrating into the Live Bridge
+| Length | Deliverable | Specification |
+|-|-|-|
+| 2 weeks | Validators, Backend, Frontend | 1. We've developed the [validation logic](#31-successful-transfers-secured-by-the-brisdge-validators) relevant for the Godwoken part of the bridge<br/>2. We've added Godwoken to the Bridge [NFT-Indexer](#32-godwoken-in-the-nft-indexer)<br/>3. We've integrated TX [fee estimation](#33-fee-estimation)<br/>4. Plugged Godwoken into the [heartbeat](#34-heartbeat)<br/>5. We've integrated with a Godwoken [rpc nodes](#35-integrated-with-rpc-nodes)<br/>6. We've integrated Godwoken in the [bridge UI](#36-godwoken-in-the-bridge-ui)<br/>7. We've deployed [smart contracts on the Mainnet](#37-mainnet-smart-contracts)<br/>8. We've added Godwoken to the bridge [JS library](https://github.com/XP-NETWORK/xpjs/search?q=godwoken)<br/>9. We've added Godwoken to the [bridge widget](#39-godwoken-in-the-bridge-widget)|
+
+### 3.1 Successful transfers secured by the Brisdge Validators
+
+![Transfers](./assets/XP.Network_Blockchain_Explorer.png)
+
+Examples of transactions:
+
+|Origin|Destination|
+|:-:|:-:|
+|[Polygon](https://polygonscan.com/tx/0xfee3d218f8110592ed8a821fb25cbbd3cd20912322a469becb51633770cc21d9)|[Godwoken](https://v1.gwscan.com/tx/0x33eed44bd6decdf4958fb59387192bc242bf5175ec416321be2b8c4f4d24bdea)|
+|[Godwoken](https://v1.gwscan.com/tx/0x8808fc5c7aece8d7c93bc8b8050c84a4fb4562e80ff94dcf2ad247e10a7b9e2e)|[Polygon](https://polygonscan.com/tx/0x280d9fdf9a77bc2d2984f4ee1f28ef468c9e7551aa9ca7cee0fcf0648b961022)|
+### 3.2 Godwoken in the NFT-Indexer
+
+22 is the [nonce]() of Godwoken in the bridge.
+
+Request format:
+```
+https://nft-index.xp.network/index/nfts/22/{account}
+```
+
+Request example:
+
+https://nft-index.xp.network/index/nfts/22/0x6449b68cc5675f6011e8DB681B142773A3157cb9
+
+Viewwing NFT Data:
+
+![NFT-Indexer Results](./assets/Godwoken_in_nft_indexer.png)
+
+### 3.3 Fee estimation
+
+![Transaction Fee Estimation](assets/Godwoken_fee_estimation_proof.png)
+
+### 3.4 heartbeat
+
+Heartbeat tool checks:
+1. Godwoken nodes are alive & respond normally
+2. That the validators have  non zero balance
+In case, one of the two is false, the chain is disabled in the UI to prevent tokens from getting stuck.
+
+### 3.5 Integrated with RPC Nodes
+
+Testnet: `https://godwoken-testnet-v1.ckbapp.dev`
+
+Mainnet: `https://v1.mainnet.godwoken.io/rpc`
+
+### 3.6 Godwoken in the Mainnet Bridge UI
+
+![UI](./assets/XP.Network_Bridge_UI.png)
+
+### 3.7 Mainnet Smart Contracts
+
+Bridge Contract: `0xeBCDdF17898bFFE81BCb3182833ba44f4dB25525`
+
+Default ERC-721: `0x9cdda01E00A5A425143F952ee894ff99B5F7999F`
+
+Default ERC-1155: `0x34933A5958378e7141AA2305Cdb5cDf514896035`
+
+### 3.8 Godwoken in JavaScript Library
+
+https://github.com/XP-NETWORK/xpjs/search?q=godwoken
+
+### 3.9 Godwoken in the Bridge Widget
+
+![UI](./assets/Godwoken_in_the_widget.png)
