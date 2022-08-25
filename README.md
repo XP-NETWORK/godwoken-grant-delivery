@@ -260,7 +260,7 @@ Wrapped NFTs: https://bridge-wnftapi.herokuapp.com/w/305095119371647373983483580
 |-|-|-|
 | 2 weeks | Validators, Backend, Frontend | 1. We've developed the [validation logic](#31-successful-transfers-secured-by-the-brisdge-validators) relevant for the Godwoken part of the bridge<br/>2. We've added Godwoken to the Bridge [NFT-Indexer](#32-godwoken-in-the-nft-indexer)<br/>3. We've integrated TX [fee estimation](#33-fee-estimation)<br/>4. Plugged Godwoken into the [heartbeat](#34-heartbeat)<br/>5. We've integrated with a Godwoken [rpc nodes](#35-integrated-with-rpc-nodes)<br/>6. We've integrated Godwoken in the [bridge UI](#36-godwoken-in-the-bridge-ui)<br/>7. We've deployed [smart contracts on the Mainnet](#37-mainnet-smart-contracts)<br/>8. We've added Godwoken to the bridge [JS library](https://github.com/XP-NETWORK/xpjs/search?q=godwoken)<br/>9. We've added Godwoken to the [bridge widget](#39-godwoken-in-the-bridge-widget)|
 
-### 3.1 Successful transfers secured by the Brisdge Validators
+### 3.1 Successful transfers secured by the Bridge Validators
 
 ![Transfers](./assets/XP.Network_Blockchain_Explorer.png)
 
@@ -296,6 +296,7 @@ Viewwing NFT Data:
 Heartbeat tool checks:
 1. Godwoken nodes are alive & respond normally
 2. That the validators have  non zero balance
+
 In case, one of the two is false, the chain is disabled in the UI to prevent tokens from getting stuck.
 
 ### 3.5 Integrated with RPC Nodes
